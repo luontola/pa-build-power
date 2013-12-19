@@ -1,0 +1,30 @@
+<!-- BUILD POWER -->
+<div class="div_unit_info_hover_panel" style="position:absolute; top:-30px;" data-bind="visible: selectionList().length != 0">
+    <table class="tbl_info_unit">
+        <tr>
+            <td>
+                <div class="div_unit_name" style="white-space: nowrap;">Build Power</div>
+            </td>
+            <td>
+                <div class="div_metal_energy_vals">
+                    <img src="img/status_bar/icon_status_metal.png" height="10px" class="img_resource_icon"/>
+                    <span class="val rate_stat" data-bind="text: buildPower.metal"></span>
+                </div>
+            </td>
+            <td>
+                <div class="div_metal_energy_vals">
+                    <img src="img/status_bar/icon_status_energy.png" height="10px" class="img_resource_icon" style="margin:1px 0px 0px 0px;"/>
+                    <span class="val rate_stat" style="margin:-13px 0px 0px 10px" data-bind="text: buildPower.energy"></span>
+                </div>
+            </td>
+            <td>
+                <div class="div_metal_energy_vals" style="white-space: nowrap; vertical-align:text-top;">
+                    <img src="img/status_bar/icon_status_metal.png" height="8px" class="img_resource_icon" style="margin:0px 0px 1px 0px;"/>
+                    /
+                    <img src="img/status_bar/icon_status_energy.png" height="9px" class="img_resource_icon" style="margin:1px 0px 0px 0px;"/>
+                    <span class="val rate_stat" style="margin:-17px 0px 0px 25px" data-bind="text: buildPower.efficiency"></span>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
