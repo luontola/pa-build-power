@@ -22,7 +22,7 @@
                     <img src="img/status_bar/icon_status_metal.png" height="8px" class="img_resource_icon" style="margin:0px 0px 1px 0px;"/>
                     /
                     <img src="img/status_bar/icon_status_energy.png" height="9px" class="img_resource_icon" style="margin:1px 0px 0px 0px;"/>
-                    <span class="val rate_stat" style="margin:-17px 0px 0px 25px" data-bind="text: buildPower.efficiency"></span>
+                    <span class="val rate_stat" style="margin:-17px 0px 0px 25px" data-bind="text: buildPower.efficiency().toFixed(1)"></span>
                 </div>
             </td>
         </tr>
