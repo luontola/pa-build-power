@@ -18,7 +18,7 @@ describe("Unit specs", function () {
     });
 
     // This sample data was produced by adding the following line
-    // to handlers.hover in live_game.js:
+    // to "handlers.hover" function in live_game.js:
     //      console.log(JSON.stringify(payload));
 
     it("Commander", function () {
@@ -35,5 +35,39 @@ describe("Unit specs", function () {
 
     it("Energy Plant", function () {
         assertMetalEnergy(0, 0, {"name": "Energy Plant", "entity": 81661, "orders": [], "spec_id": "/pa/units/land/energy_plant/energy_plant.json", "health": {"max": 1000, "current": 1000}, "metal_cost": 450, "metal_fraction": 3, "production": {"energy": 600, "metal": 0}, "consumption": {"energy": 0, "metal": 0}, "screen": {"x": 0.914691, "y": 0.291948}, "army": {"primary_color": {"b": 0.585973, "r": 0.585973, "g": 0.585973, "a": 1}, "secondary_color": {"b": 0.0209511, "r": 0.65237, "g": 0.0277553, "a": 1}}});
+    })
+});
+
+describe("Total build power", function () {
+
+    it("Calculates production efficiency", function () {
+        buildPower.metal(30);
+        buildPower.energy(1500);
+
+        expect(buildPower.efficiency()).toBe(20);
+    });
+
+    it("Production efficiency avoids division by zero", function () {
+        buildPower.metal(0);
+        buildPower.energy(0);
+
+        expect(buildPower.efficiency()).toBe(0);
+    });
+
+    // This sample data was produced by adding the following line
+    // to SelectionViewModel's "list" method in live_game.js:
+    //      console.log(JSON.stringify(output));
+
+    it("Updates the build power counters based on selection", function () {
+        var selectionList = [
+            {"type": "/pa/units/commanders/quad_base/quad_base.json", "count": 1, "icon": "img/build_bar/units/quad_base.png"},
+            {"type": "/pa/units/land/fabrication_bot/fabrication_bot.json", "count": 2, "icon": "img/build_bar/units/fabrication_bot.png"}
+        ];
+
+        buildPower.selectionUpdated(selectionList);
+
+        expect(buildPower.metal()).toBe(50);
+        expect(buildPower.energy()).toBe(3500);
+        expect(buildPower.efficiency()).toBeCloseTo(14.29);
     })
 });

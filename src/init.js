@@ -21,6 +21,10 @@ $(function () {
 
     hookFunction(handlers, 'hover', buildPower.unitSpecs.update);
 
+    hookFunction(handlers, 'selection', function () {
+        buildPower.selectionUpdated(model.selectionList());
+    });
+
     $('.div_current_selection_cont').prepend('<div id="build_power"></div>');
     loadTemplate($('#build_power'), '../../mods/BuildPower/live_game/build_power.html');
 });

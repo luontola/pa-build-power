@@ -26,11 +26,28 @@ var buildPower = (function () {
 
     // Published variables
 
-    var fabricationRate = ko.observable(30); // TODO: calculate real value
-    var energyConsumption = ko.observable(1500); // TODO: calculate real value
+    var fabricationRate = ko.observable(0);
+    var energyConsumption = ko.observable(0);
     var efficiency = ko.computed(function () {
-        return fabricationRate() / energyConsumption() * 1000.0;
+        var energy = energyConsumption();
+        var metal = fabricationRate();
+        if (energy == 0) {
+            return 0;
+        }
+        return metal / energy * 1000.0;
     });
+
+    function selectionUpdated(selectionList) {
+        var metal = 0;
+        var energy = 0;
+        for (var i = 0; i < selectionList.length; i++) {
+            var unit = selectionList[i];
+            metal += unit.count * fabricationRateOf(unit.type);
+            energy += unit.count * energyConsumptionOf(unit.type);
+        }
+        fabricationRate(metal);
+        energyConsumption(energy);
+    }
 
     return {
         unitSpecs: {
@@ -38,6 +55,7 @@ var buildPower = (function () {
             fabricationRateOf: fabricationRateOf,
             energyConsumptionOf: energyConsumptionOf
         },
+        selectionUpdated: selectionUpdated,
         metal: fabricationRate,
         energy: energyConsumption,
         efficiency: efficiency
