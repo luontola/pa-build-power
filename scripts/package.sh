@@ -2,7 +2,7 @@
 set -eu
 : ${1:? Usage: $0 VERSION}
 VERSION="$1"
-FILENAME="BuildPower-$VERSION.zip"
+FILENAME="BuildPower_v$VERSION.zip"
 set -x
 
 rm -rf dist/BuildPower
