@@ -5,23 +5,22 @@ var buildPower = (function () {
     var unitSpecs = {};
 
     function updateUnitSpecs(spec) {
-        if (!spec.spec_id) {
-            return;
+        if (spec.tool_details) {
+            unitSpecs[spec.spec_id] = {
+                metal: spec.tool_details.metal,
+                energy: spec.tool_details.energy
+            };
         }
-        unitSpecs[spec.spec_id] = {
-            metal: spec.tool_details.metal,
-            energy: spec.tool_details.energy
-        };
     }
 
     function fabricationRateOf(spec_id) {
-        var specs = unitSpecs[spec_id];
-        return specs ? specs.metal : 0;
+        var spec = unitSpecs[spec_id];
+        return spec ? spec.metal : 0;
     }
 
     function energyConsumptionOf(spec_id) {
-        var specs = unitSpecs[spec_id];
-        return specs ? specs.energy : 0;
+        var spec = unitSpecs[spec_id];
+        return spec ? spec.energy : 0;
     }
 
 

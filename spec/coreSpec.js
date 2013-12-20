@@ -32,4 +32,8 @@ describe("Unit specs", function () {
     it("Bot Factory", function () {
         assertMetalEnergy(12, 675, {"name": "Bot Factory", "entity": 80832, "orders": [81072], "spec_id": "/pa/units/land/bot_factory/bot_factory.json", "health": {"max": 2000, "current": 2000}, "metal_cost": 600, "metal_fraction": 3, "production": {"energy": 0, "metal": 0}, "consumption": {"energy": 0, "metal": 0}, "screen": {"x": 0.598476, "y": 0.373347}, "army": {"primary_color": {"b": 0.585973, "r": 0.585973, "g": 0.585973, "a": 1}, "secondary_color": {"b": 0.0209511, "r": 0.65237, "g": 0.0277553, "a": 1}}, "tool_details": {"build_target_id": "/pa/units/land/assault_bot/assault_bot.json", "energy": 675, "metal": 12, "build_target_reclaiming": false, "build_target_is_dead": false, "weapon_target": false, "build_target": true, "build_target_name": "Dox", "build_target_health": 0.242134}});
     });
+
+    it("Energy Plant", function () {
+        assertMetalEnergy(0, 0, {"name": "Energy Plant", "entity": 81661, "orders": [], "spec_id": "/pa/units/land/energy_plant/energy_plant.json", "health": {"max": 1000, "current": 1000}, "metal_cost": 450, "metal_fraction": 3, "production": {"energy": 600, "metal": 0}, "consumption": {"energy": 0, "metal": 0}, "screen": {"x": 0.914691, "y": 0.291948}, "army": {"primary_color": {"b": 0.585973, "r": 0.585973, "g": 0.585973, "a": 1}, "secondary_color": {"b": 0.0209511, "r": 0.65237, "g": 0.0277553, "a": 1}}});
+    })
 });
