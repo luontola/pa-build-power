@@ -16,7 +16,7 @@ each unit type before this mod can show that unit's build power.
 Version History
 ---------------
 
-### Upcoming
+### Build Power 1.0.0 (2013-12-21)
 
 - Shows how much metal and energy the selected units will consume when they
 are building (provided good enough economy)
