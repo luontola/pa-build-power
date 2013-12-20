@@ -35,7 +35,7 @@ var buildPower = (function () {
     var efficiency = ko.computed(function () {
         var energy = energyConsumption();
         var metal = fabricationRate();
-        if (energy == 0) {
+        if (metal == 0) {
             return 0;
         }
         return metal / energy * 1000.0;

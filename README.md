@@ -22,6 +22,11 @@ each unit type before this mod can show that unit's build power.
 Version History
 ---------------
 
+### Upcoming
+
+- If there ever is a unit that produces without using energy, its
+efficiency will be infinity.
+
 ### Build Power 1.0.0 (2013-12-21)
 
 - Shows how much metal and energy the selected units will consume when they

@@ -51,11 +51,14 @@ describe("Total build power", function () {
         expect(buildPower.efficiency()).toBe(20);
     });
 
-    it("Production efficiency avoids division by zero", function () {
+    it("Production efficiency at zero energy", function () {
         buildPower.metal(0);
         buildPower.energy(0);
-
         expect(buildPower.efficiency()).toBe(0);
+
+        buildPower.metal(1);
+        buildPower.energy(0);
+        expect(buildPower.efficiency()).toBe(Infinity);
     });
 
     // This sample data was produced by adding the following line
