@@ -7,16 +7,18 @@ fabrication rate and energy consumption of the selected units.
 
 ![Screenshot](http://i.imgur.com/LsXqkQr.png)
 
-You may download the mod from [its release thread][releases].
+You may download this mod using [PA Mod Manager][PAMM] or from this mod's
+[release thread][releases].
 
+[PAMM]: https://forums.uberent.com/threads/rel-pa-mod-manager-v2-0-2.50726/
 [releases]: https://forums.uberent.com/threads/rel-build-power-v1-0-0-58772.54974/
 
 
 Known Issues
 ------------
 
-Due to PA's modding API limitations, you will need to hover your mouse over
-each unit type before this mod can show that unit's build power.
+Due to PA's modding API limitations, you will need to hover your mouse once
+over a unit before this mod can show that unit type's build power.
 
 
 Version History
