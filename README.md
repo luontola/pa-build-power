@@ -10,8 +10,8 @@ fabrication rate and energy consumption of the selected units.
 You may download this mod using [PA Mod Manager][PAMM] or from this mod's
 [release thread][releases].
 
-[PAMM]: https://forums.uberent.com/threads/rel-pa-mod-manager-v2-0-2.50726/
-[releases]: https://forums.uberent.com/threads/rel-build-power-v1-0-0-58772.54974/
+[PAMM]: https://forums.uberent.com/threads/pa-mod-manager.50726/
+[releases]: https://forums.uberent.com/threads/build-power.54974/
 
 
 Known Issues
