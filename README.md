@@ -17,16 +17,16 @@ You may download this mod using [PA Mod Manager][PAMM] or from this mod's
 Known Issues
 ------------
 
-Due to PA's modding API limitations, you will need to hover your mouse once
-over a unit before this mod can show that unit type's build power.
+You will need to hover your mouse once over a unit before this mod can show
+that unit type's build power.
 
 
 Version History
 ---------------
 
-### Upcoming
+### Build Power 1.1.0 (2013-12-29)
 
-- Upgraded to the new mod system
+- Upgraded to the new mod system used by PAMM 3
 - If there ever is a unit that produces without using energy, its
 efficiency will be infinity.
 
