@@ -1,0 +1,22 @@
+{
+    "context": "client",
+    "identifier": "net.orfjackal.pa-build-power",
+    "display_name": "Build Power",
+    "description": "Shows the fabrication rate and energy consumption of the selected units",
+    "author": "ORFJackal",
+    "version": "1.0.1-SNAPSHOT",
+    "build": "58772",
+    "date": "xxxx-xx-xx",
+    "forum": "https://forums.uberent.com/threads/build-power.54974/",
+    "category": [
+        "in-game",
+        "ui"
+    ],
+    "id": "BuildPower",
+    "priority": 100,
+    "live_game": [
+        "coui://ui/mods/BuildPower/core.js",
+        "coui://ui/mods/BuildPower/live_game/init.js"
+    ],
+    "enabled": true
+}

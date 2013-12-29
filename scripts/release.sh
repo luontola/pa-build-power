@@ -26,10 +26,10 @@ function assert-file-contains-substring() {
 }
 
 function set-project-version() {
-    local file="src/BuildPower.ini"
+    local file="src/modinfo.json"
     local version="$1"
-    sed -i -r -e "s/^(Version=).+\$/\1$version/" "$file"
-    assert-file-contains-substring "$file" "Version=$version"
+    sed -i -r -e "s/^(\"version\": \").+(\")\$/\1$version\1/" "$file"
+    assert-file-contains-substring "$file" "\"version\": \"$version\""
 }
 
 function next-snapshot-version() {

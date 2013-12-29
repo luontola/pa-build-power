@@ -26,6 +26,7 @@ Version History
 
 ### Upcoming
 
+- Upgraded to the new mod system
 - If there ever is a unit that produces without using energy, its
 efficiency will be infinity.
 
