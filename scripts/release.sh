@@ -25,11 +25,22 @@ function assert-file-contains-substring() {
     cat "$file" | grep --quiet --fixed-strings -e "$expected" || (echo "Error: file $file did not contain $expected"; exit 1)
 }
 
+function update-json() {
+    local key="$1"
+    local value="$2"
+    local file="$3"
+    sed -i -r -e "s/^(.*\"$key\": \").+(\".*)\$/\1$value\2/" "$file"
+    assert-file-contains-substring "$file" "\"$key\": \"$value\""
+}
+
 function set-project-version() {
     local file="src/modinfo.json"
     local version="$1"
-    sed -i -r -e "s/^(\"version\": \").+(\")\$/\1$version\1/" "$file"
-    assert-file-contains-substring "$file" "\"version\": \"$version\""
+    local build=`cat "$PA_HOME/version.txt" | tr -d ' '`
+    local date=`date --iso-8601`
+    update-json "version" "$version" "$file"
+    update-json "build" "$build" "$file"
+    update-json "date" "$date" "$file"
 }
 
 function next-snapshot-version() {
