@@ -3,7 +3,8 @@ Build Power
 ===========
 
 [Planetary Annihilation](http://www.uberent.com/pa/) mod showing the
-fabrication rate and energy consumption of the selected units.
+fabrication rate and energy consumption of the selected units and
+factories.
 
 ![Screenshot](http://i.imgur.com/LsXqkQr.png)
 
