@@ -37,7 +37,7 @@ function set-project-version() {
     local file="src/modinfo.json"
     local version="$1"
     local build=`cat "$PA_HOME/version.txt" | tr -d ' '`
-    local date=`date --iso-8601`
+    local date=`date '+%Y/%m/%d'`
     update-json "version" "$version" "$file"
     update-json "build" "$build" "$file"
     update-json "date" "$date" "$file"
