@@ -16,7 +16,8 @@
     "priority": 100,
     "live_game": [
         "coui://ui/mods/BuildPower/core.js",
-        "coui://ui/mods/BuildPower/live_game/init.js"
+        "coui://ui/mods/BuildPower/live_game/init.js",
+        "coui://ui/mods/BuildPower/live_game/build_power.css"
     ],
     "enabled": true
 }

@@ -25,6 +25,10 @@ that unit type's build power.
 Version History
 ---------------
 
+### Upcoming
+
+- Updated to work with PA BETA v.61250
+
 ### Build Power 1.1.0 (2013-12-29)
 
 - Upgraded to the new mod system used by PAMM 3
