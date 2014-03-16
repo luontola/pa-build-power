@@ -2,7 +2,7 @@
 // This software is released under the Apache License 2.0.
 // The license text is at http://www.apache.org/licenses/LICENSE-2.0
 
-$(function () {
+(function () {
 
     function hookFunction(obj, fnName, hookFn) {
         var realFn = obj[fnName];
@@ -11,15 +11,6 @@ $(function () {
             hookFn.apply(obj, arguments);
         };
     }
-
-    function loadTemplate(element, url) {
-        element.load(url, function () {
-            ko.applyBindings(model, element.get(0));
-        });
-    }
-
-
-    // Hook this mod into PA
 
     model.buildPower = buildPower;
 
@@ -30,5 +21,5 @@ $(function () {
     });
 
     $('.div_current_selection_cont').prepend('<div id="build_power"></div>');
-    loadTemplate($('#build_power'), '../../mods/BuildPower/live_game/build_power.html');
-});
+    $('#build_power').append(loadHtml('../../mods/BuildPower/live_game/build_power.html'));
+})();
