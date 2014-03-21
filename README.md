@@ -6,7 +6,7 @@ Build Power
 fabrication rate and energy consumption of the selected units and
 factories.
 
-![Screenshot](http://i.imgur.com/LsXqkQr.png)
+![Screenshot](http://i.imgur.com/uKoFMbz.png)
 
 You may download this mod using [PA Mod Manager][PAMM] or from this mod's
 [release thread][releases].
