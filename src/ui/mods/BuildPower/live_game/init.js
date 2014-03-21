@@ -20,6 +20,6 @@
         buildPower.selectionUpdated(model.selectionList());
     });
 
-    $('.div_current_selection_cont').prepend('<div id="build_power"></div>');
-    $('#build_power').append(loadHtml('../../mods/BuildPower/live_game/build_power.html'));
+    $('.div_unit_selection_cont').prepend('<div id="build_power"></div>');
+    $('#build_power').append(loadHtml('coui://ui/mods/BuildPower/live_game/build_power.html'));
 })();

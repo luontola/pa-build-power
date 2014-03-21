@@ -25,6 +25,10 @@ that unit type's build power.
 Version History
 ---------------
 
+### Upcoming
+
+- Updated to work with PA GAMMA v.63180
+
 ### Build Power 1.1.1 (2014-02-20)
 
 - Updated to work with PA BETA v.61250

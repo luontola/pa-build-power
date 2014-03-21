@@ -13,7 +13,7 @@
 }
 
 #build_power td {
-    background: url(coui://ui/alpha/live_game/img/unit_info_panel/img_info_panel_bground_midspan.png) top left repeat-x;
+    background: url(coui://ui/main/game/live_game/img/unit_info_panel/img_info_panel_bground_midspan.png) top left repeat-x;
     vertical-align: bottom;
     white-space: nowrap;
     padding: 0 5px 0 5px;
