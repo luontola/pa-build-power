@@ -28,6 +28,7 @@ Version History
 ### Upcoming
 
 - Updated to work with PA GAMMA v.63180
+- Improved visual style
 
 ### Build Power 1.1.1 (2014-02-20)
 
