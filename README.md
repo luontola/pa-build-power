@@ -25,6 +25,10 @@ that unit type's build power.
 Version History
 ---------------
 
+### Upcoming
+
+- Reads unit stats from Blueprint Info Framework
+
 ### Build Power 1.1.2 (2014-03-22)
 
 - Updated to work with PA GAMMA v.63180

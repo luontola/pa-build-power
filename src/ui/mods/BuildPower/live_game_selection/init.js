@@ -1,21 +1,29 @@
-// Copyright © 2013 Esko Luontola <www.orfjackal.net>
+// Copyright © 2013-2015 Esko Luontola <www.orfjackal.net>
 // This software is released under the Apache License 2.0.
 // The license text is at http://www.apache.org/licenses/LICENSE-2.0
 
 (function () {
 
-    function hookFunction(obj, fnName, hookFn) {
-        var realFn = obj[fnName];
-        obj[fnName] = function () {
-            realFn.apply(obj, arguments);
-            hookFn.apply(obj, arguments);
-        };
-    }
-
     model.buildPower = buildPower;
 
-    // TODO: get the unit specs by parsing the JSON
-    //hookFunction(handlers, 'hover', buildPower.unitSpecs.update);
+    bif.registerBIFReadyCallback(function () {
+        _(bif.getUnitBlueprints()).forEach(function (blueprint) {
+            //console.log(blueprint.id, blueprint);
+            var constructionDemand = _(bif.getUnitBlueprintBuildArmIDs(blueprint.id))
+                .map(bif.getToolBlueprint)
+                .pluck('construction_demand')
+                .reduce(function (result, construction_demand) {
+                    result.energy += construction_demand.energy;
+                    result.metal += construction_demand.metal;
+                    return result;
+                }, {energy: 0, metal: 0});
+            //console.log(constructionDemand);
+            buildPower.unitSpecs.update({
+                path: blueprint.path,
+                constructionDemand: constructionDemand
+            })
+        });
+    });
 
     model.selectionList.subscribe(buildPower.selectionUpdated);
 

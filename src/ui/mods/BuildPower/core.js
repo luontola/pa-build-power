@@ -1,4 +1,4 @@
-// Copyright © 2013 Esko Luontola <www.orfjackal.net>
+// Copyright © 2013-2015 Esko Luontola <www.orfjackal.net>
 // This software is released under the Apache License 2.0.
 // The license text is at http://www.apache.org/licenses/LICENSE-2.0
 
@@ -9,7 +9,11 @@ var buildPower = (function () {
     var unitSpecs = {};
 
     function updateUnitSpecs(spec) {
-        if (spec.tool_details) {
+        if (spec.constructionDemand) {
+            unitSpecs[spec.path] = spec.constructionDemand;
+        }
+        // TODO: update tests, remove this
+        else if (spec.tool_details) {
             unitSpecs[spec.spec_id] = {
                 metal: spec.tool_details.metal,
                 energy: spec.tool_details.energy
@@ -17,13 +21,13 @@ var buildPower = (function () {
         }
     }
 
-    function fabricationRateOf(spec_id) {
-        var spec = unitSpecs[spec_id];
+    function fabricationRateOf(unitType) {
+        var spec = unitSpecs[unitType];
         return spec ? spec.metal : 0;
     }
 
-    function energyConsumptionOf(spec_id) {
-        var spec = unitSpecs[spec_id];
+    function energyConsumptionOf(unitType) {
+        var spec = unitSpecs[unitType];
         return spec ? spec.energy : 0;
     }
 
@@ -42,6 +46,7 @@ var buildPower = (function () {
     });
 
     function selectionUpdated(selectionList) {
+        //console.log("selectionUpdated", selectionList);
         var metal = 0;
         var energy = 0;
         for (var i = 0; i < selectionList.length; i++) {

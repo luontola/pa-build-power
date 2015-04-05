@@ -16,9 +16,13 @@
   "priority": 100,
   "scenes": {
     "live_game_selection": [
+      "coui://ui/mods/rBlueprintInfoFramework/rBlueprintInfoFramework_scene.js",
       "coui://ui/mods/BuildPower/core.js",
       "coui://ui/mods/BuildPower/live_game_selection/init.js",
       "coui://ui/mods/BuildPower/live_game_selection/build_power.css"
     ]
-  }
+  },
+  "dependencies": [
+    "com.pa.raevn.rblueprintinfoframework"
+  ]
 }
