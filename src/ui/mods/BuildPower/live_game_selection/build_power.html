@@ -2,23 +2,14 @@
 <div id="build_power" data-bind="visible: buildPower.metal() != 0">
     <table>
         <tr>
-            <td>
-                <div>Build Power</div>
-            </td>
-            <td>
-                <img src="img/status_bar/icon_status_metal.png" height="9px" class="img_resource_icon"/>
-                <span data-bind="text: buildPower.metal"></span>
-            </td>
-            <td>
-                <img src="img/status_bar/icon_status_energy.png" height="9px" class="img_resource_icon"/>
-                <span data-bind="text: buildPower.energy"></span>
-            </td>
-            <td>
-                <img src="img/status_bar/icon_status_metal.png" height="9px" class="img_resource_icon"/>
-                /
-                <img src="img/status_bar/icon_status_energy.png" height="9px" class="img_resource_icon"/>
-                <span data-bind="text: buildPower.efficiency().toFixed(1)"></span>
-            </td>
+            <td>BP</td>
+            <td><img src="img/status_bar/icon-status-metal.png" height="9px"/>
+                <span data-bind="text: buildPower.metal"></span></td>
+            <td><img src="img/status_bar/icon-status-energy.png" height="9px"/>
+                <span data-bind="text: buildPower.energy"></span></td>
+            <td><img src="img/status_bar/icon-status-metal.png" height="9px"
+                    />/<img src="img/status_bar/icon-status-energy.png" height="9px"/>
+                <span data-bind="text: buildPower.efficiency().toFixed(4)"></span></td>
         </tr>
     </table>
 </div>

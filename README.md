@@ -27,7 +27,9 @@ Version History
 
 ### Upcoming
 
+- Updated to work with PA v.79600
 - Reads unit stats from Blueprint Info Framework
+- Report efficiency without multiplying it with 1000
 
 ### Build Power 1.1.2 (2014-03-22)
 

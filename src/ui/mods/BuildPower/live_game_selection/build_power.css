@@ -1,24 +1,19 @@
 #build_power {
-    position: absolute;
-    top: -18px;
+    /* similar to .div_unit_list */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
 
-    /* Same as .span_build_bar_tab except for padding and margin */
-    font-size: 10px;
-    color: white;
-    text-shadow: 0px 2px 2px black;
-    font-family: 'Sansation Bold';
-    text-transform: uppercase;
-    font-weight: normal;
-    border-radius: 0px;
-    border: 1px solid #444;
-    border-width: 1px 1px 1px 1px;
-    background: #1D1D1D;
-    box-shadow: inset 0px 0px 8px #000;
-    -webkit-text-stroke: 0px;
+    /* similar to .div_build_bar_unit_hover_detail .resources */
+    font-size: 11px;
+    font-family: 'Sansation Regular TTF';
+    color: #91FBFF;
 }
 
 #build_power td {
     vertical-align: middle;
     white-space: nowrap;
-    padding: 4px 5px 2px 5px;
+    padding: 0 4px;
 }

@@ -27,5 +27,5 @@
 
     model.selectionList.subscribe(buildPower.selectionUpdated);
 
-    $('.div_unit_selection_cont').prepend(loadHtml('coui://ui/mods/BuildPower/live_game_selection/build_power.html'));
+    $('.div_unit_list').before(loadHtml('coui://ui/mods/BuildPower/live_game_selection/build_power.html'));
 })();

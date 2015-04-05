@@ -9,16 +9,7 @@ var buildPower = (function () {
     var unitSpecs = {};
 
     function updateUnitSpecs(spec) {
-        if (spec.constructionDemand) {
-            unitSpecs[spec.path] = spec.constructionDemand;
-        }
-        // TODO: update tests, remove this
-        else if (spec.tool_details) {
-            unitSpecs[spec.spec_id] = {
-                metal: spec.tool_details.metal,
-                energy: spec.tool_details.energy
-            };
-        }
+        unitSpecs[spec.path] = spec.constructionDemand;
     }
 
     function fabricationRateOf(unitType) {
@@ -42,7 +33,7 @@ var buildPower = (function () {
         if (metal == 0) {
             return 0;
         }
-        return metal / energy * 1000.0;
+        return metal / energy;
     });
 
     function selectionUpdated(selectionList) {
