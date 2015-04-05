@@ -1,26 +1,24 @@
 {
-    "context": "client",
-    "identifier": "net.orfjackal.pa-build-power",
-    "display_name": "Build Power",
-    "description": "Shows the fabrication rate and energy consumption of the selected units and factories",
-    "author": "ORFJackal",
-    "version": "1.1.3-SNAPSHOT",
-    "build": "63180",
-    "date": "2014/03/22",
-    "forum": "https://forums.uberent.com/threads/build-power.54974/",
-    "icon": "http://pamods.github.io/icons/BuildPower.png",
-    "category": [
-        "in-game",
-        "ui"
-    ],
-    "id": "BuildPower",
-    "priority": 100,
-    "scenes": {
-        "live_game": [
-            "coui://ui/mods/BuildPower/core.js",
-            "coui://ui/mods/BuildPower/live_game/init.js",
-            "coui://ui/mods/BuildPower/live_game/build_power.css"
-        ]
-    },
-    "enabled": true
+  "context": "client",
+  "identifier": "net.orfjackal.pa-build-power",
+  "display_name": "Build Power",
+  "description": "Shows the fabrication rate and energy consumption of the selected units and factories",
+  "author": "ORFJackal",
+  "version": "1.1.3-SNAPSHOT",
+  "build": "63180",
+  "date": "2014/03/22",
+  "forum": "https://forums.uberent.com/threads/build-power.54974/",
+  "icon": "http://pamods.github.io/icons/BuildPower.png",
+  "category": [
+    "in-game",
+    "ui"
+  ],
+  "priority": 100,
+  "scenes": {
+    "live_game_selection": [
+      "coui://ui/mods/BuildPower/core.js",
+      "coui://ui/mods/BuildPower/live_game_selection/init.js",
+      "coui://ui/mods/BuildPower/live_game_selection/build_power.css"
+    ]
+  }
 }

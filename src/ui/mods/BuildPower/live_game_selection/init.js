@@ -14,11 +14,10 @@
 
     model.buildPower = buildPower;
 
-    hookFunction(handlers, 'hover', buildPower.unitSpecs.update);
+    // TODO: get the unit specs by parsing the JSON
+    //hookFunction(handlers, 'hover', buildPower.unitSpecs.update);
 
-    hookFunction(handlers, 'selection', function () {
-        buildPower.selectionUpdated(model.selectionList());
-    });
+    model.selectionList.subscribe(buildPower.selectionUpdated);
 
-    $('.div_unit_selection_cont').prepend(loadHtml('coui://ui/mods/BuildPower/live_game/build_power.html'));
+    $('.div_unit_selection_cont').prepend(loadHtml('coui://ui/mods/BuildPower/live_game_selection/build_power.html'));
 })();
