@@ -4,7 +4,7 @@
   "display_name": "Build Power",
   "description": "Shows the fabrication rate and energy consumption of the selected units and factories",
   "author": "ORFJackal",
-  "version": "1.2.0",
+  "version": "1.2.1-SNAPSHOT",
   "build": "79600",
   "date": "2015/04/06",
   "forum": "https://forums.uberent.com/threads/build-power.54974/",
