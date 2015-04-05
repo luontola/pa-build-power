@@ -10,7 +10,7 @@ factories.
 
 You may download this mod using [PA Mod Manager][PAMM].
 
-[PAMM]: https://forums.uberent.com/threads/pa-mod-manager.50726/
+[PAMM]: https://forums.uberent.com/threads/rel-pa-mod-manager-cross-platform.59992/
 
 
 Known Issues
