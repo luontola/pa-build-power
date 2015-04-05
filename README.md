@@ -25,7 +25,7 @@ that unit type's build power.
 Version History
 ---------------
 
-### Upcoming
+### Build Power 1.2.0 (2015-04-06)
 
 - Updated to work with PA v.79600
 - Reads unit stats from Blueprint Info Framework
