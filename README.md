@@ -8,11 +8,9 @@ factories.
 
 ![Screenshot](http://repo.orfjackal.net/pa-mods/BuildPower_v1.2.0.png)
 
-You may download this mod using [PA Mod Manager][PAMM] or from this mod's
-[release thread][releases].
+You may download this mod using [PA Mod Manager][PAMM].
 
 [PAMM]: https://forums.uberent.com/threads/pa-mod-manager.50726/
-[releases]: https://forums.uberent.com/threads/build-power.54974/
 
 
 Known Issues
