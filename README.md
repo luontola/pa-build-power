@@ -23,6 +23,10 @@ that unit type's build power.
 Version History
 ---------------
 
+### Build Power 1.3.0 (2015-04-15)
+
+- New icons
+
 ### Build Power 1.2.0 (2015-04-06)
 
 - Updated to work with PA v.79600
