@@ -3,3 +3,5 @@
 *.js            eol=lf
 *.json          eol=lf
 *.html          eol=lf
+*.png		binary
+*.psd		binary

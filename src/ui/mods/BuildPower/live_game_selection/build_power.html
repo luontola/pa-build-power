@@ -2,13 +2,11 @@
 <div id="build_power" data-bind="visible: buildPower.metal() != 0">
     <table>
         <tr>
-            <td>BP</td>
-            <td><img src="img/status_bar/icon-status-metal.png" height="9px"/>
+            <td><img src="/mods/BuildPower/live_game_selection/icon-build-power-metal.png"/>
                 <span data-bind="text: buildPower.metal"></span></td>
-            <td><img src="img/status_bar/icon-status-energy.png" height="9px"/>
+            <td><img src="/mods/BuildPower/live_game_selection/icon-build-power-energy.png"/>
                 <span data-bind="text: buildPower.energy"></span></td>
-            <td><img src="img/status_bar/icon-status-metal.png" height="9px"
-                    />/<img src="img/status_bar/icon-status-energy.png" height="9px"/>
+            <td><img src="/mods/BuildPower/live_game_selection/icon-build-power-efficiency.png"/>
                 <span data-bind="text: buildPower.efficiency().toFixed(4)"></span></td>
         </tr>
     </table>
